@@ -51,8 +51,8 @@ class AuthController extends Controller
                 'email' =>Auth::user()->email,
             ];
             $request->session()->put('user_info', $user_details);
-            
-            return redirect()->intended('dashboard')
+            // dd(session()->all());
+            return redirect()->intended('companies')
                         ->withSuccess('You have Successfully loggedin');
         }
   
